@@ -18,7 +18,6 @@
     "@reduxjs/toolkit": "^1.9.6",
     "@zegocloud/zego-uikit-prebuilt": "^1.8.11",
     "emoji-mart": "^5.5.2",
-    "emoji-picker-react": "^4.5.2",
     "firebase": "^10.4.0",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
