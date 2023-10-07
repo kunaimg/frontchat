@@ -72,7 +72,7 @@ function Chat() {
   const [dselectedFile, dsetSelectedFile] = useState(null);
 
   useEffect(() => {
-    socket = io("https://backchatapp-63ig.onrender.com");
+    socket = io("http://localhost:3000");
   }, []);
   useEffect(() => {
     setuserdata(userdataa);
@@ -86,7 +86,7 @@ function Chat() {
   <div class="b1">
     <h6 class="h61">
       <img
-        src="https://backchatapp-63ig.onrender.com/public/uploads/${item?.image}"
+        src="http://localhost:3000/public/uploads/${item?.image}"
         alt=""
       />
       <b>${item?.username}</b>
@@ -97,14 +97,14 @@ function Chat() {
       } else if (item?.frontimage) {
         $(".chatboxx").append(` <div class="chatbox"> <img
         class="imageset"
-        src="https://backchatapp-63ig.onrender.com/public/uploads/${item?.frontimage}"
+        src="http://localhost:3000/public/uploads/${item?.frontimage}"
         alt=""
       /></div>`);
       } else if (item?.frontdoc) {
         $(".chatboxx").append(`<div class="chatbox">
       
         <iframe
-        src="https://backchatapp-63ig.onrender.com/public/uploads/${item?.frontdoc}"
+        src="http://localhost:3000/public/uploads/${item?.frontdoc}"
         style="
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -129,7 +129,7 @@ function Chat() {
        
         margin-left: 1.5rem;
       "
-        src="https://backchatapp-63ig.onrender.com/public/uploads/${item?.frontvideo}"
+        src="http://localhost:3000/public/uploads/${item?.frontvideo}"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -150,7 +150,7 @@ function Chat() {
         width: 20rem !important;
         height: 7rem !important;"
       >
-        <source src="https://backchatapp-63ig.onrender.com/public/uploads/${item.frontaudio}" type="audio/mpeg" />
+        <source src="http://localhost:3000/public/uploads/${item.frontaudio}" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>`);
@@ -159,7 +159,7 @@ function Chat() {
         <div class="b2">
           <h6 class="h62">
             <img
-              src="https://backchatapp-63ig.onrender.com/public/uploads/${item?.image}"
+              src="http://localhost:3000/public/uploads/${item?.image}"
               alt=""
             />
             <b>${item?.username}</b>
@@ -199,7 +199,7 @@ function Chat() {
     <div class="b2">
       <h6  class="h62">
         <img
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${userdataa.image}"
+          src="http://localhost:3000/public/uploads/${userdataa.image}"
           alt=""
         />
         <b>${userdataa.username}</b>:New user joined
@@ -226,7 +226,7 @@ function Chat() {
     <div class="b2">
       <h6  class="h62">
         <img
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${userdatadis.image}"
+          src="http://localhost:3000/public/uploads/${userdatadis.image}"
           alt=""
         />
         <b>${userdatadis.username}</b>:User disconnected
@@ -249,7 +249,7 @@ function Chat() {
       <div class="b2">
         <h6  class="h62">
           <img
-            src="https://backchatapp-63ig.onrender.com/public/uploads/${userdataa.image}"
+            src="http://localhost:3000/public/uploads/${userdataa.image}"
             alt=""
           />
           <b>${userdataa.name}</b>:${userdataa.message}
@@ -303,7 +303,7 @@ function Chat() {
     <div class="b1">
       <h6 class="h61">
         <img
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${currentuserdata.image}"
+          src="http://localhost:3000/public/uploads/${currentuserdata.image}"
           alt=""
         />
         <b>${currentuserdata.username}</b>
@@ -338,7 +338,7 @@ function Chat() {
     setImage(e.target.files[0].name);
     setSelectedFile(e.target.files[0]);
     setMessage(
-      `https://backchatapp-63ig.onrender.com/public/uploads/${e.target.files[0].name}`
+      `http://localhost:3000/public/uploads/${e.target.files[0].name}`
     );
     setsendcontent(false);
   };
@@ -352,7 +352,7 @@ function Chat() {
 
       formData.append("image", selectedFile);
 
-      fetch("https://backchatapp-63ig.onrender.com/upload", {
+      fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
       })
@@ -362,7 +362,7 @@ function Chat() {
 
           $(".chatboxx").append(` <div class="chatbox"> <img
           class="imageset"
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${data.image}"
+          src="http://localhost:3000/public/uploads/${data.image}"
           alt=""
         /></div>`);
           setnumber(0);
@@ -410,7 +410,7 @@ function Chat() {
     asetImage(e.target.files[0].name);
     asetSelectedFile(e.target.files[0]);
     setMessage(
-      `https://backchatapp-63ig.onrender.com/public/uploads/${e.target.files[0].name}`
+      `http://localhost:3000/public/uploads/${e.target.files[0].name}`
     );
     setsendcontent(false);
   };
@@ -428,7 +428,7 @@ function Chat() {
 
       formData.append("image", aselectedFile);
 
-      fetch("https://backchatapp-63ig.onrender.com/upload", {
+      fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
       })
@@ -466,7 +466,7 @@ function Chat() {
             height: 7rem !important;
             "
           >
-            <source src="https://backchatapp-63ig.onrender.com/public/uploads/${data.image}" type="audio/mpeg" />
+            <source src="http://localhost:3000/public/uploads/${data.image}" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>`);
@@ -499,7 +499,7 @@ function Chat() {
     vsetImage(e.target.files[0].name);
     vsetSelectedFile(e.target.files[0]);
     setMessage(
-      `https://backchatapp-63ig.onrender.com/public/uploads/${e.target.files[0].name}`
+      `http://localhost:3000/public/uploads/${e.target.files[0].name}`
     );
     setsendcontent(false);
   };
@@ -517,7 +517,7 @@ function Chat() {
 
       formData.append("image", vselectedFile);
 
-      fetch("https://backchatapp-63ig.onrender.com/upload", {
+      fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
       })
@@ -554,7 +554,7 @@ function Chat() {
          
           margin-left: 1.5rem;
         "
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${data.image}"
+          src="http://localhost:3000/public/uploads/${data.image}"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -591,7 +591,7 @@ function Chat() {
     dsetImage(e.target.files[0].name);
     dsetSelectedFile(e.target.files[0]);
     setMessage(
-      `https://backchatapp-63ig.onrender.com/public/uploads/${e.target.files[0].name}`
+      `http://localhost:3000/public/uploads/${e.target.files[0].name}`
     );
     setsendcontent(false);
   };
@@ -609,7 +609,7 @@ function Chat() {
 
       formData.append("image", dselectedFile);
 
-      fetch("https://backchatapp-63ig.onrender.com/upload", {
+      fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
       })
@@ -637,7 +637,7 @@ function Chat() {
           $(".chatboxx").append(`<div class="chatbox">
       
         <iframe
-        src="https://backchatapp-63ig.onrender.com/public/uploads/${data.image}"
+        src="http://localhost:3000/public/uploads/${data.image}"
         style="
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -710,7 +710,7 @@ function Chat() {
               direction={"row"}
             >
               <img
-                src={`https://backchatapp-63ig.onrender.com/public/uploads/${currentuserdata?.image}`}
+                src={`http://localhost:3000/public/uploads/${currentuserdata?.image}`}
                 alt=""
               />
               <Typography variant="h6" className="h6">
@@ -755,7 +755,7 @@ function Chat() {
                           >
                             <div>
                               <img
-                                src={`https://backchatapp-63ig.onrender.com/public/uploads/${item.image}`}
+                                src={`http://localhost:3000/public/uploads/${item.image}`}
                                 alt=""
                               />
                             </div>
@@ -786,7 +786,7 @@ function Chat() {
                           >
                             <div>
                               <img
-                                src={`https://backchatapp-63ig.onrender.com/public/uploads/${item.image}`}
+                                src={`http://localhost:3000/public/uploads/${item.image}`}
                                 alt=""
                               />
                             </div>
