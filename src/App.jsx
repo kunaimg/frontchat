@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<HomeScreen />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
-        {/* <Route path="/chat" element={<Protected Com={Chat} />}></Route>
+        <Route path="/chat" element={<Protected Com={Chat} />}></Route>
         <Route path="/createid" element={<Protected Com={CreateId} />}></Route>
 
         <Route
@@ -31,14 +31,7 @@ function App() {
           path="/loginvideo"
           element={<Protected Com={LoginVideo} />}
         ></Route>
-        <Route path="/onechat" element={<Protected Com={Onechat} />}></Route> */}
-        <Route path="/chat" element={<Chat />}></Route>
-        <Route path="/createid" element={<CreateId />}></Route>
-
-        <Route path="/videostart" element={<EnterVideo />}></Route>
-        <Route path="/videochat" element={<Video />}></Route>
-        <Route path="/loginvideo" element={<LoginVideo />}></Route>
-        <Route path="/onechat" element={<Onechat />}></Route>
+        <Route path="/onechat" element={<Protected Com={Onechat} />}></Route>
       </Routes>
     </BrowserRouter>
   );

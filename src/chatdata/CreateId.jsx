@@ -33,7 +33,7 @@ function CreateId() {
 
       formData.append("image", selectedFile);
 
-      fetch("http://localhost:3000/upload", {
+      fetch("https://backchatapp-63ig.onrender.com/upload", {
         method: "POST",
         body: formData,
       })
@@ -136,7 +136,7 @@ function CreateId() {
 
         formData.append("image", selectedFilee);
 
-        fetch("http://localhost:3000/upload", {
+        fetch("https://backchatapp-63ig.onrender.com/upload", {
           method: "POST",
           body: formData,
         })
