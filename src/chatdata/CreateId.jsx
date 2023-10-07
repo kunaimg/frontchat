@@ -125,7 +125,7 @@ function CreateId() {
 
   function validd(e) {
     e.preventDefault();
-    console.log(countt);
+
     if (countt < 3) {
       if (nameidd && imagee && usernamee) {
         if (!selectedFilee) {

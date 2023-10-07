@@ -199,7 +199,7 @@ function Chat() {
     <div class="b2">
       <h6  class="h62">
         <img
-          src="https://backchatapp-63ig.onrender.com/public/uploads/${userdataa.image}"
+          src="http://localhost:3000/public/uploads/${userdataa.image}"
           alt=""
         />
         <b>${userdataa.username}</b>:New user joined
